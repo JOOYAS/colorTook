@@ -21,7 +21,7 @@ It’s funny—selecting HSLA colors is easy, yet with this project, I made a si
 
 ## Demo 💻
 
-Try it live here: [Live Demo Link](https://jooyas.github.io/colortook/)
+Try it live here: [Live Demo Link](https://jooyas.github.io/colorTook/)
 
 ## Installation 🛠️
 
