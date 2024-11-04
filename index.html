@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colorTook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="box-container">
+        <div class="colored-box-container">
+            <div class="underlay"></div>
+            <div class="box colored-box">
+                <p class="text" contenteditable="true">
+                    Choose colors for Background & this Text.
+                </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <section class="radios">
+                <input type="radio" name="bgOrTextSelector" id="radio-1" value="bg" checked>
+                <label for="radio-1" id="label-1">Background</label>
+                <input type="radio" name="bgOrTextSelector" id="radio-2" value="text">
+                <label for="radio-2" id="label-2">Text</label>
+            </section>
+
+
+            <section class="sliders">
+                <input type="range" class="slider hue" value="160" min="0" max="360" />
+                <input type="range" class="slider saturation" value="100" min="0" max="100">
+                <input type="range" class="slider lightness" value="50" min="0" max="100">
+                <input type="range" class="slider transparency" value="1" min="0" max="1" step=".01">
+            </section>
+
+            <section class="outputs">
+                <select name="color-methods" id="">
+                    <option value="hsl" disabled>HSL</option>
+                    <option value="hsla" selected>HSLA</option>
+                    <option value="hex" disabled>HEX</option>
+                    <option value="rgb" disabled>RGB</option>
+                    <option value="rgba" disabled>RGBA</option>
+                </select>
+                <div class="color-data-container">
+                    <div class="color-data">
+                        <div class="underlayAndColor">
+                            <span class="color color-underlay"></span>
+                            <span class="color" id="bg-color"></span>
+                        </div>
+                        <div class="copy-container">
+                            <input type="text" id="bg-color-value" readonly>
+                            <button class="copy-btn" id="bg-copy-btn">&#10697</button>
+                        </div>
+                    </div>
+                    <div class="color-data">
+                        <div class="underlayAndColor">
+                            <span class="color color-underlay"></span>
+                            <span class="color" id="text-color"></span>
+                        </div>
+                        <div class="copy-container">
+                            <input type="text" id="text-color-value" readonly>
+                            <button class="copy-btn" id="text-copy-btn">&#10697</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
