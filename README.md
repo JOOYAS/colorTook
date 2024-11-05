@@ -28,7 +28,7 @@ Try it live here: [Live Demo Link](https://jooyas.github.io/colorTook/)
 Clone the repository and open `index.html` in your browser.
 
 ```bash
-git clone https://github.com/jooyas/colortook.git
+git clone https://github.com/jooyas/colorTook.git
 ```
 
 ## Images 🖼️
