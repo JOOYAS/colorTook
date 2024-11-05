@@ -74,10 +74,10 @@ transparencySlider.addEventListener("input", () => {
 //mutationObserver works like useeffect in react
 const observer = new MutationObserver(() => {
     console.log("works");
-    bgColorValueText.value =
+    bgColorValueText.innerText =
         getComputedStyle(root).getPropertyValue("--bg-color");
 
-    textColorValueText.value =
+    textColorValueText.innerText =
         getComputedStyle(root).getPropertyValue("--text-color");
 });
 
@@ -87,16 +87,20 @@ observer.observe(root, {
 });
 
 //copies to clipboard on click of copy button
-bgCopyBtn.addEventListener("click", () => {
-    navigator.clipboard.writeText(bgColorValueText.value);
+bgCopyBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const colorValue = bgColorValueText.value;
+    navigator.clipboard.writeText(colorValue);
     bgCopyBtn.innerText = "\u2713";
     setTimeout(() => {
         bgCopyBtn.innerText = "\u29C9";
     }, 2000);
 });
 
-textCopyBtn.addEventListener("click", () => {
-    navigator.clipboard.writeText(textColorValueText.value);
+textCopyBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const colorValue = textColorValueText.value;
+    navigator.clipboard.writeText(colorValue);
     textCopyBtn.innerText = "\u2713";
     setTimeout(() => {
         textCopyBtn.innerText = "\u29C9";
