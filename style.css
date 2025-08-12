@@ -30,7 +30,7 @@ body {
     justify-content: space-evenly;
     height: 100%;
     width: 100%;
-    border: .5rem solid var(--hue);
+    border: .5rem solid var(--secondary-color);
     transition: border var(--transition-duration) ease;
 }
 
@@ -53,7 +53,7 @@ body {
     height: 100%;
     position: relative;
     overflow: hidden;
-
+    border-radius: 30px;
 }
 
 /* this is the checkered background that shows up when decreased transparency */
@@ -106,19 +106,26 @@ body {
 
 /* bg or text radio boxes styles */
 .radios {
+    margin: 8px;
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
 
+input[type=radio] + label
+{
+    transition: all var(--transition-duration) ease;
+    border-radius: 18px;
+    border: 8px solid transparent;
+}
 input[type=radio] {
     display: none;
 
     &:checked+label {
         color: white;
         border: 8px solid black;
+    
         text-shadow: 1px 1px 1px black;
-        transition: background-color var(--transition-duration) ease;
 
         &#label-1 {
             background-color: var(--bg-color);
@@ -268,7 +275,7 @@ label {
     justify-content: space-around;
     align-items: center;
 
-    border-top: .5rem solid var(--hue);
+    border-top: .5rem solid hsl(0, 0%, 100%);
     transition: border var(--transition-duration) ease;
 
     padding: 1rem;
@@ -371,7 +378,7 @@ button {
     }
 
     .text {
-        font-size: 1.3rem;
+        font-size: 1rem;
         padding-block: 5%;
         border-block: 10px dotted var(--text-color) !important;
         overflow: hidden;
@@ -379,15 +386,12 @@ button {
 
     input[type=radio]:checked+label {
         font-size: 1.2rem;
-        border: 5px solid black;
-        border-radius: 0;
+        /* border: 5px solid black; */
     }
 
     .sliders {
         padding-inline: 3%;
     }
-
-    .slider {}
 
     .slider::-webkit-slider-thumb {
         width: .6rem;

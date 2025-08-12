@@ -38,7 +38,7 @@ const color = () =>
 
 //setting hue color
 const hueColor = () => {
-    let currentHue = `hsl(${hue}, 100%, 50%)`;
+    let currentHue = `hsl(${hue}, 50% ,50%`;
     root.style.setProperty("--hue", currentHue);
 };
 
@@ -73,7 +73,7 @@ transparencySlider.addEventListener("input", () => {
 //dynamically changing the color values to copy button according to the color change
 //mutationObserver works like useeffect in react
 const observer = new MutationObserver(() => {
-    console.log("works");
+    console.log("observer works");
     bgColorValueText.innerText =
         getComputedStyle(root).getPropertyValue("--bg-color");
 
